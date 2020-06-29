@@ -28,6 +28,7 @@ def get_clean_columns(columns):
 
 
 def distplot(df, x, hue=None, title=None, base_dir="local/figs", prefix=""):
+    Path(base_dir).mkdir(exist_ok=True)
     if title is None:
         title = f"Dist Plot of {x}"
     plt.clf()
@@ -45,6 +46,7 @@ def distplot(df, x, hue=None, title=None, base_dir="local/figs", prefix=""):
 
 
 def countplot(df, x, hue=None, title=None, base_dir="local/figs", prefix=""):
+    Path(base_dir).mkdir(exist_ok=True)
     if title is None:
         title = f"Count Plot of {x}"
     plt.clf()
